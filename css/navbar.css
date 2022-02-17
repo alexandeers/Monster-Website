@@ -1,0 +1,206 @@
+/* Parent */
+nav {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    color: var(--deep_s);
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(1em, 2vw, 1.75em); 
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.nav_wrapper {
+    transition: 0.5s;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+/* List Order Structure */
+nav > ul {
+    /* Apply flex display */
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0.75em 1.5em;
+}
+
+
+/* Buttons */
+nav > ul > li {
+    /* Animations */
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    /* Custom Decoration */
+    cursor: pointer;
+
+    /* Positioning */
+    margin: 0.5em;
+    margin-top: 0;
+    margin-left: 0 !important;
+
+    /* Remove text decoration */
+    text-decoration: none;
+    text-decoration-style: none;
+    list-style-type: none;
+}
+
+/* Text Paragraph */
+nav > ul > li > a {
+    display: block;
+    position: relative;
+
+    /* Animations */
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    /* Custom Decoration */
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text_colour);
+
+    /* Structure */
+    padding: 0.5em;
+    margin: 0.25em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.isVisible {
+    display: block;
+    filter: opacity(100%) !important;
+    -webkit-filter: opacity(100%) !important;
+    transform: translateY(0) !important;
+}
+
+.navBackground {
+    background-color: var(--accent_p);
+    outline: var(--accent_s) solid 2px;
+    transition: 0.5s;
+}
+
+.nav_button {
+    display: none;
+    height: auto;
+    width: 1.25em;
+    margin: 0 0 0 0;
+    padding: 1em;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.nav_button > div {
+    margin: auto;
+    position: relative;
+    background-color: var(--deep_s);
+    height: 4px;
+}
+
+.nav_button > div::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    background-color: var(--deep_s);
+    width: 100%;
+    height: 4px;
+}
+
+.nav_button > div::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: var(--deep_s);
+    width: 100%;
+    height: 4px;
+}
+
+/* Animations */
+nav > ul > li:hover a{
+    transform: translateY(0.25em);
+}
+
+nav > ul > li:hover a::after {
+    transform: scaleX(100%);
+}
+
+nav > ul > li:hover a::before {
+    transform: scaleY(100%);
+}
+
+nav > ul > li > a::after,
+                a::before {
+    /* Styling */
+    content: "";
+    position: absolute;
+    background-color: var(--accent_p);
+    z-index: -1;
+    border-radius: 2px;
+}
+
+nav > ul > li > a::after {
+    bottom: 0.5em;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    /* Animations */
+    transition: 100ms ease-in-out;
+    transform: scaleX(0%);
+    transform-origin: center left;
+}
+
+nav > ul > li > a::before {
+    bottom: 0.5em;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 1em);
+
+    /* Animations */
+    transition: 150ms ease-in-out 100ms;
+    transform: scaleY(0%);
+    transform-origin: bottom;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav_wrapper {
+        position: fixed;
+    }
+    nav > ul {
+        justify-content: left;
+        margin-left: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav > ul > li {
+        transition: 0.5s;
+        filter: opacity(0%);
+        transform: translateY(-50px);
+        font-size: calc(1em * 1.25);
+        margin: 0;
+        padding: 0;
+    }
+
+    nav > ul > li:nth-of-type(2) {
+        transition: 0.5s;
+        transition-delay: 0.1s;
+        filter: opacity(0%);
+        transform: translateY(-50px);
+    }
+
+    .nav_button {
+        margin-top: 0.75em;
+        display: block;
+        filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.35));
+    }
+}

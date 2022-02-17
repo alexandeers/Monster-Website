@@ -1,0 +1,15 @@
+# Blender MTL File: 'Monst Scene.blend'
+# Material Count: 1
+
+newmtl initialShadingGroup
+Ns 99.999988
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd monster-energy-drink\\source\\c9a713eb6bd94f268e9e8644f85ad542.rar\\model\\textures\\initialShadingGroup_albedo.jpg
+map_Ns monster-energy-drink\\source\\c9a713eb6bd94f268e9e8644f85ad542.rar\\model\\textures\\initialShadingGroup_roughness.jpg
+refl monster-energy-drink\\source\\c9a713eb6bd94f268e9e8644f85ad542.rar\\model\\textures\\initialShadingGroup_metallic.jpg

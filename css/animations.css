@@ -1,0 +1,91 @@
+/********************************/
+/* Animations */
+/********************************/
+
+.slide-in-blurred-from-right {
+	-webkit-animation: slide-in-blurred 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@-webkit-keyframes slide-in-blurred{
+    0% {
+      -webkit-transform: translateX(1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateX(1000px) scaleY(2.5) scaleX(0.2); 
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred {
+    0% {
+      -webkit-transform: translateX(1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateX(1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+
+/* LOADING SCREEN */
+
+.loading_screen {
+        z-index: 100;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: var(--deep);
+        position: absolute;
+    }
+    
+    .loading_screen > div {
+        height: 100px;
+        width: 100px;
+        border: 5px var(--accent_p) inset;
+        border-radius: 50%;
+        outline: var(--accent_p) ridge 3px;
+        outline-offset: 3px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        animation: loading 0.5s infinite ease-in-out;
+    
+        filter: drop-shadow(0 0 20px var(--accent_p));
+    }
+    
+    @keyframes loading {
+        0% {
+            transform: rotateZ(360deg);
+    
+        }
+    
+        100% {
+            transform: rotateZ(0deg);
+    
+        }
+    }

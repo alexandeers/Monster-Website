@@ -1,0 +1,10 @@
+:root {
+    --deep: #080808;
+    --deep_s: rgb(8, 128, 8);
+    --accent_p: green;
+    --accent_s: yellowgreen;
+    --thumb: rgb(139, 208, 37);
+    --hover: rgb(154, 223, 50);
+    --bg_image: url(../images/RaptorSlide_V7.png);
+    --text_colour: white;
+}

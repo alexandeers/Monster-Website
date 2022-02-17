@@ -1,0 +1,10 @@
+:root {
+    --deep: #281f20;
+    --deep_s: #ffffff;
+    --accent_p: #ffc0cb;
+    --accent_s: #f08797;
+    --tint: #FF9A78;
+    --thumb: hsl(350, 100%, 88%);
+    --hover: hsl(350, 100%, 80%);
+    --bg_image: url(../images/PunchSlideV3.png);
+}
