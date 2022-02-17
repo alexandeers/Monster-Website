@@ -1,19 +1,18 @@
-
 /* Whole container */
 .grid_container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     clear: both;
-    margin: 10% 15% 4em 15%; 
+    margin: 10% 15% 4em 15%;
     padding: 0;
 
     /* Font styling */
     color: white;
     font-weight: 500;
     font-style: normal;
-    font-size: clamp(1.25em, 1vw, 2em); 
+    font-size: clamp(1.25em, 1vw, 2em);
     font-family: 'Red Hat Display', sans-serif;
 
     font-smooth: subpixel-antialiased;
@@ -32,7 +31,7 @@
     position: relative;
 
     /* Style */
-    background-color: rgba(255,255,255,0.0);
+    background-color: rgba(255, 255, 255, 0.0);
     border-radius: 10px;
     backdrop-filter: blur(25px) contrast(75%);
     -webkit-backdrop-filter: blur(25px);
@@ -50,6 +49,7 @@
 .grid_ratio_2_4 {
     width: 49.5%;
 }
+
 .grid_ratio_1_4 {
     width: 24.25%;
 }
@@ -90,7 +90,7 @@
 
 .grid_button {
     transition: 0.2s;
-    font-size: clamp(3rem, 5vw, 5rem); 
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 900;
     text-shadow: none;
     background-color: var(--accent_p);
@@ -103,7 +103,7 @@
 }
 
 .grid_button_container:hover .grid_button {
-    transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: translateX(0.5rem);
 }
 
@@ -130,7 +130,7 @@
         transform: rotateY(0deg);
         margin: 0;
     }
-    
+
     .grid_button {
         transform: rotateY(0deg);
         margin: 0;

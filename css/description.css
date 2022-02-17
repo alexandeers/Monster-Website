@@ -4,7 +4,7 @@
     color: white;
     display: flex;
     flex-wrap: wrap;
-    text-shadow: 0 2px 0 rgba(0,0,0,0.15);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
 
     /* Font */
     font-size: x-large;
@@ -56,5 +56,3 @@
         width: 100%;
     }
 }
-
-  

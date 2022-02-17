@@ -1,16 +1,16 @@
-$(window).on("load",function() {
+$(window).on("load", function () {
     //Load function
     setTimeout(LoadPage, 100);
 
     //If
-    if( $("head").hasClass("raptor")) {
+    if ($("head").hasClass("raptor")) {
         $("body").addClass("parallax");
         $(".grid_container").addClass("perspective_3000");
     }
 })
 
 function LoadPage() {
-    $(".loading_screen").fadeOut(1000); 
+    $(".loading_screen").fadeOut(1000);
     $("main").fadeIn(1000);
 
     $(".grid_container").addClass(".slide-in-blurred-from-right");
@@ -21,4 +21,3 @@ function NavbarClick() {
     $(".navdiv").toggleClass("isOpen");
     $(".nav_wrapper").toggleClass("navBackground");
 }
-
