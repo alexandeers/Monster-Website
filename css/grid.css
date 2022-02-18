@@ -5,8 +5,8 @@
     flex-wrap: wrap;
     justify-content: center;
     clear: both;
-    margin: 10% 15% 4em 15%;
-    padding: 0;
+    margin: 0;
+    padding: 10%;
 
     /* Font styling */
     color: white;
@@ -71,7 +71,7 @@
 }
 
 .grid_border_top {
-    border-top: var(--accent_p) dashed 2px;
+    border-top: var(--accent_p) solid 2px;
 }
 
 .grid_border_bottom {

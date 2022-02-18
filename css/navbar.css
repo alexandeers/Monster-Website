@@ -10,9 +10,13 @@ nav {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+.decrease-text-after-scroll {
+    font-size: clamp(1em, 1vw, 1.75em);
+}
+
 .nav_wrapper {
     transition: 0.5s;
-    position: relative;
+    position: fixed;
     top: 0;
     overflow: hidden;
     width: 100%;
@@ -30,7 +34,7 @@ nav>ul {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0.75em 1.5em;
+    padding: 0 0.5em;
 }
 
 
@@ -82,10 +86,18 @@ nav>ul>li>a {
     transform: translateY(0) !important;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);    
+}
+
 .navBackground {
     background-color: var(--accent_p);
     transition: 0.5s;
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 3px 20px rgba(0, 0, 0, 0.5));
 }
 
 .navBackground>nav>ul>.nav_button {
@@ -180,6 +192,7 @@ nav>ul>li>a::before {
 @media only screen and (max-width: 768px) {
     .nav_wrapper {
         position: fixed;
+        box-shadow: none !important;
     }
 
     nav>ul {

@@ -4,7 +4,7 @@ $(window).on("load", function () {
 
     //If
     if ($("head").hasClass("raptor")) {
-        $("body").addClass("parallax");
+        $("main").addClass("parallax");
         $(".grid_container").addClass("perspective_3000");
     }
 })
@@ -21,3 +21,14 @@ function NavbarClick() {
     $(".navdiv").toggleClass("isOpen");
     $(".nav_wrapper").toggleClass("navBackground");
 }
+
+window.addEventListener('scroll', function() {
+    if(this.window.scrollY > 50) {
+        $(".nav_wrapper").addClass("sticky");
+        $("nav").addClass("decrease-text-after-scroll")
+    } else {
+        $(".nav_wrapper").removeClass("sticky");
+        $("nav").removeClass("decrease-text-after-scroll")
+
+    }
+});

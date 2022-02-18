@@ -7,6 +7,7 @@
     --thumb: hsl(350, 100%, 88%);
     --hover: hsl(350, 100%, 80%);
     --bg_image: url(../images/PunchSlideV3.png);
+    --bg_colour: #ffffff;
 
     --nav_colour: white;
 }
