@@ -6,12 +6,12 @@ nav {
     color: var(--deep_s);
     font-weight: 500;
     font-style: normal;
-    font-size: clamp(1em, 2vw, 1.75em);
+    font-size: clamp(1em, 1.45vw, 2.5em);
     font-family: 'Red Hat Display', sans-serif;
 }
 
 .decrease-text-after-scroll {
-    font-size: clamp(1em, 1vw, 1.75em);
+    font-size: clamp(1em, 1vw, 2.5em);
 }
 
 .nav_wrapper {
@@ -79,6 +79,10 @@ nav>ul>li>a {
     user-select: none;
 }
 
+.nav_options {
+    margin-block: auto;
+}
+
 .isVisible {
     display: block;
     filter: opacity(100%) !important;
@@ -90,12 +94,12 @@ nav>ul>li>a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);    
+    background-color: rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.65);    
 }
 
 .navBackground {
-    background-color: var(--accent_p);
+    background-color: var(--accent_p) !important;
     transition: 0.5s;
     filter: drop-shadow(0 3px 20px rgba(0, 0, 0, 0.5));
 }
@@ -222,5 +226,13 @@ nav>ul>li>a::before {
         margin-top: 0.75em;
         display: block;
         filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.35));
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: unset;
+        box-shadow: none;   
     }
 }

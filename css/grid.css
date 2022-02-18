@@ -1,9 +1,8 @@
 /* Whole container */
 .grid_container {
     display: flex;
+    gap: 0em;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     clear: both;
     margin: 0;
     padding: 10%;
@@ -30,6 +29,10 @@
     margin-bottom: 1rem;
     position: relative;
 
+    /* flex-grow: 1;
+    flex-basis: 100%; */
+    grid-column: 1;
+
     /* Style */
     background-color: rgba(255, 255, 255, 0.0);
     border-radius: 10px;
@@ -39,7 +42,7 @@
 
 /* Item paragraphs */
 .grid_item p {
-    padding: 0 1em 0 1em;
+    padding: 1em;
 }
 
 .grid_item:first-child {
@@ -81,11 +84,10 @@
 .grid_button_container {
     /* transform: rotateY(25deg); */
     display: block;
-    flex-shrink: 1;
     width: auto;
     max-width: fit-content;
     cursor: pointer;
-    margin-left: 1rem;
+    margin: none;
 }
 
 .grid_button {
@@ -95,11 +97,13 @@
     text-shadow: none;
     background-color: var(--accent_p);
     background-image: var(--deep_s);
+    transform-origin: left;
 }
 
 .grid_button p {
     user-select: none;
     margin: 5px;
+    padding: 0.1em 0.2em 0.1em 0.2em;
 }
 
 .grid_button_container:hover .grid_button {
@@ -108,7 +112,7 @@
 }
 
 .grid_button_container:active .grid_button {
-    transform: translateX(1rem) scale(90%);
+    transform: translateX(1rem) scale(99%);
 }
 
 @media only screen and (max-width: 768px) {
